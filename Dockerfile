@@ -5,7 +5,7 @@ RUN yarn install --frozen-lockfile
 RUN yarn run build
 
 FROM builder AS testing
-RUN yarn test
+RUN yarn test && yarn test:e2e
 
 FROM node:15.4.0-alpine3.10
 WORKDIR /usr/src/app
