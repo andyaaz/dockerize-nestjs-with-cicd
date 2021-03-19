@@ -21,4 +21,4 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
-          target: test
+          target: testing
