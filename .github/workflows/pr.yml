@@ -18,7 +18,6 @@ jobs:
         id: test
         uses: docker/build-push-action@v2
         with:
-          builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./Dockerfile
           target: testing

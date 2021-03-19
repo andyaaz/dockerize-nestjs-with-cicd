@@ -21,4 +21,11 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+
+  it('/does-not-exist (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/does-not-exist')
+      .expect(200)
+      .expect('Hello World!');
+  });
 });
